@@ -68,7 +68,7 @@ typedef struct instruction_s
 extern global_t *global;
 
 /* operation codes instructions */
-
-void _pint(stack_t **double_stack, unsigned int the_line_number);
+void _push(stack_t **stack, unsigned int line_number);
+void _pall(stack_t **stack, unsigned int line_number);
 
 #endif
