@@ -8,7 +8,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-/*
+/**
  * Struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
@@ -26,7 +26,7 @@ typedef struct stack_s
     struct stack_s *next;
 } stack_t;
 
-/*
+/**
  * Struct global_s - global variables
  * @lifo: stack or queue
  * @line_number: line number
@@ -48,9 +48,7 @@ typedef struct monty_s
 
 } global_t;
 
-
-
-/*
+/**
  * Struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
