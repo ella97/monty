@@ -37,7 +37,7 @@ typedef struct stack_s
  * Description: global variables
  * you can assume it will be used
  */
-typedef struct monty_s 
+typedef struct monty_s
 {
     int lifo;
     unsigned int line_number;
