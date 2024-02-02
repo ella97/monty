@@ -55,7 +55,7 @@ char *input_text;
  * Description: opcode and its function
  * you can assume it will be used
  * in a stack, queues, LIFO, FIFO
- **/
+ */
 
 typedef struct instruction_s
 {
