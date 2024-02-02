@@ -28,22 +28,27 @@ typedef struct stack_s
 
 /*
  * Struct global_s - global variables
- * @arg: second parameter of the line number
- * @fp: file pointer
- * @input: input text
- * @lifo: is a stack (or queue)
+ * @lifo: stack or queue
+ * @line_number: line number
+ * @arg: value
+ * @head: doubly linked list
+ * @fp: file
+ * @input_text: input text
  * Description: global variables
- * you can assume it will be used in a doubly linked list
+ * you can assume it will be used
  */
-typedef struct global_s
+typedef struct monty_s 
 {
+    int lifo;
+    unsigned int line_number;
     char *arg;
+    stack_t *head;
     FILE *fp;
-    char *input;
-    stack_t *lifo;
+    char *input_text;
+
 } global_t;
 
-extern global_t global;
+
 
 /*
  * Struct instruction_s - opcode and its function
@@ -60,6 +65,10 @@ typedef struct instruction_s
     void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void _pint(stack_t **stack, unsigned int line_number);
+extern global_t *global;
+
+/* operation codes instructions */
+
+void _pint(stack_t **double_stack, unsigned int the_line_number);
 
 #endif
