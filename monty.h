@@ -28,21 +28,19 @@ typedef struct stack_s
 
 /*
  * Struct global_s - global variables
- * @lifo: is the top of the stack (or queue)
- * @line_number: line number
  * @arg: second parameter of the line number
- * @head: doubly linked list
  * @fp: file pointer
+ * @input: input text
+ * @lifo: is a stack (or queue)
  * Description: global variables
  * you can assume it will be used in a doubly linked list
  */
 typedef struct global_s
 {
-    int lifo;
-    unsigned int line_number;
     char *arg;
-    stack_t *head;
     FILE *fp;
+    char *input;
+    stack_t *lifo;
 } global_t;
 
 extern global_t global;
@@ -62,8 +60,6 @@ typedef struct instruction_s
     void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
 void _pint(stack_t **stack, unsigned int line_number);
-
 
 #endif
