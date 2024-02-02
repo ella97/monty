@@ -69,4 +69,8 @@ extern global_t *global;
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 
+
+/* main */
+void free_global(void);
+
 #endif
